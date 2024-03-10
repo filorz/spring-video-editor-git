@@ -6,7 +6,6 @@ import com.java.payload.StatusHandleResponse;
 import com.java.payload.VideoRequest;
 import com.java.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -60,7 +59,7 @@ public class VideoController {
 	}
 
 	@DeleteMapping("/{id}")
-	public ResponseEntity<?> deleteProduct(@PathVariable Long id) {
+	public ResponseEntity<?> deleteFile(@PathVariable Long id) {
 
 		return ResponseEntity.ok()
 				.body(new ApiResponse(true));
